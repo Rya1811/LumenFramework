@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$app->get('/todo', 'TodoController@index');
+$app->get('/todo/{id}', 'TodoController@show');
+$app->post('/todo', 'TodoController@store');
